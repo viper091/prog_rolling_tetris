@@ -1,0 +1,11 @@
+Link do vídeo: https://youtu.be/eheVWV4KNr4
+
+Para jogar é só acessar o arquivo game.html, clicar escolher o tamanho do jogo desejado e iniciar uma nova partida.
+Para jogar utilize as teclas do teclado:
+Para cima->Rotaciona a peça
+Para baixo->A peça desce com maior rapidez
+Para os lados-> A peça se move
+
+Ao completar a linha com o elemento composto por uma única célula, é rotacionado as células do tabuleiro, as peças começam a subir ao invés de descer. Entretanto, as teclas continuam com suas mesmas funções.
+
+Bom jogo!

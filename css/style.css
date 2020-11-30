@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: 'Press Start 2P', cursive;
+    min-height: 100%;
+    color: #FFF;
+    /* background: linear-gradient(to top, #2768C6, #3183f8); */
+    background: url('../img/background.png') bottom no-repeat;
+    background-size: 100%;
+    background-color: #319BFF;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABFklEQVRYR9WXURLDIAhE6/0PbSdOtUpcd1Gnpv1KGpTHBpCE1/cXq+vrMph7dGvXZTtpfW10DCA5jrH1H0Jhs5E0hnZdCR+vb5S8Nn8mQCeS9BdSalYJqMBjAGzq59xAESN7VFVUgV8AZB/dZBR7QTFDCqGquvUBVVoEtgIwpQRzmANSFHgWQKExHdIrPeuMvQNDarXe6nC/AutgV3JW+6bgqQLeV8FekRtgV+ToDKEKnACYKsfZjjkam7a0ZpYTytwmgainpC3HvwBocgKOxqRjehoR9DFKNFYtOwCGYCszobeCbl26N6yyQ6g8X/Wex/rBPsNEV6qAMaJPMynIHQCoSqS9JSMmwef51LflTgCRszU7DvAGiV6mHWfsaVUAAAAASUVORK5CYII=),auto;
+}
+
+a {
+    text-decoration: none;
+    color: #FFF ;
+    cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC) 14 0,pointer;
+}
+
+h1 {
+    font-size: 6vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase !important;
+}
+
+::selection {
+  background: #0FBBF0;
+}
+
+input[type=text], input[type=password], input[type=email] {
+    font-family: 'Press Start 2P', cursive;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-image-slice: 2;
+    border-image-width: 9px;
+    border-image-source: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8" ?><svg version="1.1" width="5" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2 1 h1 v1 h-1 z M1 2 h1 v1 h-1 z M3 2 h1 v1 h-1 z M2 3 h1 v1 h-1 z" fill="rgb(33,37,41)" /></svg>');
+    border-image-outset: 5;
+}
+
+button{
+    position: relative;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 13px;
+    padding: 10px 6px;
+    margin: 4px;
+    border-image-slice: 2;
+    border-image-width: 10px;
+    border-image-source: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8" ?><svg version="1.1" width="5" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2 1 h1 v1 h-1 z M1 2 h1 v1 h-1 z M3 2 h1 v1 h-1 z M2 3 h1 v1 h-1 z" fill="rgb(33,37,41)" /></svg>');
+    border-image-outset: 5;
+    text-transform: uppercase !important;
+    cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC) 14 0,pointer;
+    background-color: #FFF;
+    user-select: none;
+    min-width: 70px;
+}
+
+button:focus {
+    outline: 0;
+}
+
+button::after {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    left: -2px;
+    content: "";
+    box-shadow: inset -4px -4px #ADAFBC;
+}
+
+header {
+    padding-top: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    margin: 4px;
+    border-spacing: 0;
+    border-collapse: separate;
+    border-image-slice: 2;
+    border-image-width: 2;
+    border-image-repeat: stretch;
+    border-image-source: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8" ?><svg version="1.1" width="5" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2 1 h1 v1 h-1 z M1 2 h1 v1 h-1 z M3 2 h1 v1 h-1 z M2 3 h1 v1 h-1 z" fill="rgb(33,37,41)" /></svg>');
+    border-image-outset: 1;
+    border-style: solid;
+    border-width: 4px;
+}
+
+td, th {
+    position: relative;
+    padding: .5rem;
+    word-wrap: break-word;
+    border-color: #212529;
+    border-style: solid;
+    border-width: 0 .30em .30em 0;
+}
+
+ul {
+    list-style: square;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.float-right {
+    float: right !important;
+}
+
+.content {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.center {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.navbar {
+    position: fixed;
+    overflow: hidden;
+    background-color: #FFF;
+    border-bottom: 1px solid #e2e2e2;
+    height: 40px;
+    width: 100%;
+
+    z-index: 99999999;
+}
+
+.navbar-content {
+    float: left;
+    position: relative;
+    display: inline;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.logo {
+    font-size: 30px;
+    background-color: #CBCBCB;
+    width: 35px;
+    margin-left: 5px;
+    padding: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.item {
+    font-size: 13px;
+    margin-left: 20px;
+}
+
+nav > a {
+    text-decoration: none;
+    color: #357AAB;
+}
+
+nav > a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #313131;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+nav > a:visited {
+    color: #357AAB;
+}
+
+nav > a:hover:after { 
+    width: 100%; 
+    left: 0; 
+}
+
+.mr-1 {
+    margin-right: 10px; 
+}
+
+.mr-2 {
+   margin-right: 20px; 
+}
+
+.mr-3 {
+    margin-right: 30px; 
+}
+
+.mr-4 {
+    margin-right: 40px; 
+}
+
+.mt-1 {
+    margin-top: 10px; 
+}
+
+.mt-2 {
+   margin-top: 20px; 
+}
+
+.mt-3 {
+    margin-top: 30px; 
+}
+
+.mt-4 {
+    margin-top: 40px; 
+}
+
+.piece-border {
+    border: 5px inset rgba(255,255,255,.3);
+    box-sizing: border-box !important;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .text-dark {
+      color: black;
+  }
