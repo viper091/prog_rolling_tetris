@@ -637,6 +637,13 @@ window.addEventListener("keydown", function(e) { //bloqueia o scroll com as tecl
 
 
 function fimDeJogo() { //mostra modal que o jogo acabou
+    let pontuacao = document.getElementById('pontuacao').innerText;
+    let nivel = document.getElementById('nivel').innerText;
+    let linhas = document.getElementById('linhas').innerText;
+    let timer = document.getElementById('time').innerText;
+    $.post("script.php", `pontuacao=${pontuacao}&nivel=${nivel}&linhas=${linhas}&timer=${timer}`, function( data ) {
+        console.log(data);
+    });
     const modal = document.getElementById("fimDeJogo");
     modal.style.display = "block";
 }
