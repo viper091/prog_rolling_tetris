@@ -1,4 +1,8 @@
-
+<?php
+session_start();
+require_once("functions.php");
+verificaLogado();
+?>
 <!DOCTYPE html>
 <html lang="pt">
    <head>
@@ -16,7 +20,7 @@
       </header>
       <section class="content">
          <h2>Dados para cadastro:</h2>
-         <form action="game.html">
+         <form action="game.php">
             <label for="nome">Nome Completo:</label><br>
             <input type="text" id="nome" name="nome"><br>
             <label for="data">Data de nascimento:</label><br>
@@ -33,7 +37,7 @@
             <input type="password" id="senha" name="senha"><br>
             <button class="mt-2" type="submit" name="btnCadastro">Cadastrar</button>
          </form>
-         <a class="float-right" href="index.html">Já possui login? Faça seu login aqui</a>
+         <a class="float-right" href="index.php">Já possui login? Faça seu login aqui</a>
       </section>
       <footer class="text-center"><p>Desenvolvido para a disciplina SI401<p><br>Estilos inspirados/baseados em https://nostalgic-css.github.io/NES.css/</footer>
    </body>
