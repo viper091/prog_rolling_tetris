@@ -1,8 +1,9 @@
 <?php
-try{$conn= new PDO("mysql:host=localhost;dbname=test", "root", "");
+try{
+    $conn= new PDO("mysql:host=localhost", "root", "");
     $sql= '
-    CREATE DATABASE grupo173;
-    use grupo173;
+    CREATE DATABASE grupo17;
+    use grupo17;
     
 
     SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -16,7 +17,7 @@ try{$conn= new PDO("mysql:host=localhost;dbname=test", "root", "");
     /*!40101 SET NAMES utf8mb4 */;
     
     --
-    -- Database: `grupo173`
+    -- Database: `grupo17`
     --
     
     -- --------------------------------------------------------

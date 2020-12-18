@@ -482,7 +482,7 @@ function startTimer(display) {
             hour++;
         }
 
-        display.innerText = `${hour}:${minute<10?'0'+minute:minute}:${second<10?'0'+second:second}`;
+        display.innerText = `${hour<10?'0'+hour:hour}:${minute<10?'0'+minute:minute}:${second<10?'0'+second:second}`;
 
         if (isRunning == 0) { //verifica se o jogo não está rodando, para sair da função
             clearInterval(refreshId);
