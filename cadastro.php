@@ -23,17 +23,17 @@ verificaLogado();
          <h2>Dados para cadastro:</h2>
          <form action="cadastrar.php" method="POST">
             <label for="nome">Nome Completo:</label><br>
-            <input type="text" id="nome" name="nome" placeholder="Ex: João Da Silva" value="João Da Silva"><br>
+            <input type="text" id="nome" name="nome" placeholder="Ex: João Da Silva"><br>
             <label for="data">Data de nascimento:</label><br>
-            <input type="text" id="data" name="data" placeholder="Ex: 2010-11-29" value ="2010-11-29"><br>
+            <input type="text" id="data" name="data" placeholder="Ex: 2010-11-29"><br>
             <label for="cpf">CPF:</label><br>
-            <input type="text" id="cpf" name="cpf" placeholder="Ex: 999.999.999-99" value ="999.999.999-99"><br>
+            <input type="text" id="cpf" name="cpf" placeholder="Ex: 999.999.999-99"><br>
             <label for="telefone">Telefone:</label><br>
-            <input type="text" id="telefone" name="telefone" placeholder="Ex: 19 99999-9999" value="19 99999-9999"><br>
+            <input type="text" id="telefone" name="telefone" placeholder="Ex: 19 99999-9999"><br>
             <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" placeholder="Ex: joao@gmail.com" value="joao@gmail.com"><br>
+            <input type="email" id="email" name="email" placeholder="Ex: joao@gmail.com"><br>
             <label for="user">Usuário:</label><br>
-            <input type="text" id="user" name="user" placeholder="Ex: Joao" value="Joao"><br>
+            <input type="text" id="user" name="user" placeholder="Ex: Joao"><br>
             <label for="senha">Senha:</label><br>
             <input type="password" id="senha" name="senha"><br>
             <button class="mt-2" type="submit" name="btnCadastro">Cadastrar</button>
