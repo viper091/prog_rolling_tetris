@@ -25,6 +25,44 @@ function login($conn, $usuario, $senha){
     }
 }
 
+function atualizarUser($conn, $usuario) {
+    $sql = "UPDATE usuario SET nome=:nome, telefone=:telefone, email=:email, senha=:senha WHERE ID = :idUser";
+    $stmt = $conn->prepare($sql);
+    if($stmt->execute($usuario)) {
+        return true;
+    }
+
+    return "Erro ao atualizar o usuário";
+}
+
+function getDadosUser() {
+    if(estaLogado()) {
+        $sql = "SELECT * FROM USUARIO WHERE ID = :idUser";
+        $conn = conectaBanco();
+        $stmt = $conn->prepare($sql);
+        $stmt->execute(['idUser' => $_SESSION['idUser']]);
+
+        if($stmt->rowCount() > 0) {
+            return $stmt->fetch();
+        }
+    }
+    return null;
+}
+
+function cadastrar($conn, $aluno) {
+    try {
+        $sql = "INSERT INTO usuario(nome, nascimento, cpf, telefone, email, user, senha)
+            VALUES(:nome, :dt_nascimento, :cpf, :telefone, :email, :usuario, :senha)";
+        if($conn->prepare($sql)->execute($aluno)) {
+            return true;
+        }
+
+        return 'Ocorreu um erro ao inserir';
+    } catch(PDOException $e) {
+        return false;
+    }
+}
+
 function estaLogado(){
     if(isset( $_SESSION['idUser'])){
         return true;

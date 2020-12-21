@@ -12,7 +12,12 @@ verificaPermissao();
       </title>
       <link rel="stylesheet" type="text/css" href="css/style.css">
       <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-      <script src="js/jogo.js"></script>
+      <?php
+         if(substr($_SERVER['REQUEST_URI'], strrpos($_SERVER['REQUEST_URI'], '/') + 1)=="game.php") {
+            echo '<script src="js/jogo.js"></script>';
+            echo '<script src="js/toast.js"></script>';
+         }
+      ?>
    </head>
    <?php
    if(substr($_SERVER['REQUEST_URI'], strrpos($_SERVER['REQUEST_URI'], '/') + 1)=="game.php"){

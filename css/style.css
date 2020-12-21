@@ -37,7 +37,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #0FBBF0;
 }
 
-input[type=text], input[type=password], input[type=email] {
+input[type=text], input[type=password], input[type=email], input[type=number] {
     font-family: 'Press Start 2P', cursive;
     width: 100%;
     padding: 12px 20px;
@@ -272,3 +272,69 @@ nav > a:hover:after {
   .text-dark {
       color: black;
   }
+  
+.snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    color: #fff;
+    text-align: center;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+    transform: translate(-50%, 0);
+    
+    border: solid white 5px;
+    border-image-slice: 2;
+    border-image-width: 3;
+    border-image-source: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8" ?><svg version="1.1" width="5" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2 1 h1 v1 h-1 z M1 2 h1 v1 h-1 z M3 2 h1 v1 h-1 z M2 3 h1 v1 h-1 z" fill="rgb(33,37,41)" /></svg>');
+    border-image-outset: 3;
+  }
+  
+.snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+.success {
+    background-color: #00C851;
+}
+
+.error {
+    background-color: #FF4444;
+}
+
+.warning {
+    background-color: #FFBB33;
+}
+
+.primary {
+    background-color: #33B5E5;
+}
+
+.default {
+    background-color: #333;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}

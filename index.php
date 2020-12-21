@@ -3,7 +3,7 @@ session_start();
 require_once("functions.php");
 verificaLogado();
 if(!empty($_POST)) {
-    login(conectaBanco(),$_POST['user'],$_POST['senha']);
+   login(conectaBanco(),$_POST['user'],$_POST['senha']);
 }
 ?>
 <!DOCTYPE html>
@@ -15,6 +15,7 @@ if(!empty($_POST)) {
       </title>
       <link rel="stylesheet" type="text/css" href="css/style.css">
       <link rel="stylesheet" type="text/css" href="css/index.css">
+      <script src="js/toast.js"></script>
    </head>
    <body>
       <header>
@@ -33,6 +34,8 @@ if(!empty($_POST)) {
       </section>
       <a href="cadastro.php">Cadastre-se aqui</a>
       <footer class="text-center"><p>Desenvolvido para a disciplina SI401<p><br>Estilos inspirados/baseados em https://nostalgic-css.github.io/NES.css/</footer>
+      
+      <div id="toasts"></div>
    </body>
 </html>
 

@@ -70,6 +70,8 @@ include("header.php")
          <p>Desenvolvido para a disciplina SI401
          <p><br>Estilos inspirados/baseados em https://nostalgic-css.github.io/NES.css/
       </footer>
+      
+      <div id="toasts"></div>
    </body>
 </html>
 
