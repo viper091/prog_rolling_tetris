@@ -57,7 +57,7 @@ function cadastrar($conn, $aluno) {
             return true;
         }
 
-        return 'Ocorreu um erro ao inserir';
+        return false;
     } catch(PDOException $e) {
         return false;
     }
