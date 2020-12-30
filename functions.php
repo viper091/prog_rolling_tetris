@@ -7,6 +7,13 @@ function conectaBanco(){
     }
 }
 
+
+function setLocalStorage($itemName, $item, $rota = '') {
+    $js_code = 'sessionStorage.setItem("'.$itemName.'", JSON.stringify(' . $item . '));
+    window.location.href = "./'. $rota .'"';
+    echo '<script>' . $js_code . '</script>';
+}
+
 function login($conn, $usuario, $senha){
 
     $sql = "select id FROM usuario where user = :user and senha = :senha";
@@ -17,11 +24,10 @@ function login($conn, $usuario, $senha){
     $row = $stmt->fetch();
     if($stmt->rowCount() > 0){
          $_SESSION['idUser'] = $row['id'];
-         echo $_SESSION['idUser'];
          verificaLogado();
     }
     else{
-        echo '<p>Usuário ou senha incorretos</p>';
+        setLocalStorage('createdUser', '{ status:"error", details: "Usuário ou senha incorretos" }', 'index.php');
     }
 }
 
@@ -37,7 +43,7 @@ function atualizarUser($conn, $usuario) {
 
 function getDadosUser() {
     if(estaLogado()) {
-        $sql = "SELECT * FROM USUARIO WHERE ID = :idUser";
+        $sql = "SELECT * FROM usuario WHERE id = :idUser";
         $conn = conectaBanco();
         $stmt = $conn->prepare($sql);
         $stmt->execute(['idUser' => $_SESSION['idUser']]);
