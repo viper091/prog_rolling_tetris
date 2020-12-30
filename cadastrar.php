@@ -13,7 +13,10 @@
             'senha' => $_POST['senha'],
         );
 
-        if(cadastrar(conectaBanco(), $novoUsuario)) {
+        if (DateTime::createFromFormat('Y-m-d', $_POST['data']) === FALSE) {
+            setLocalStorage('createdUser', '{ status:"error", details: "Data inválida" }', 'cadastro.php');
+        }
+        else if(cadastrar(conectaBanco(), $novoUsuario)) {
             setLocalStorage('createdUser', '{ status:"success", details: "Cadastrado com sucesso" }');
         }
         else {
@@ -22,12 +25,5 @@
     }
     else {
         setLocalStorage('createdUser', '{ status:"warning", details: "Preencha todos os campos!" }', 'cadastro.php');
-    }
-    
-
-    function setLocalStorage($itemName, $item, $rota = '') {
-        $js_code = 'sessionStorage.setItem("'.$itemName.'", JSON.stringify(' . $item . '));
-        window.location.href = "./'. $rota .'"';
-        echo '<script>' . $js_code . '</script>';
     }
 ?>

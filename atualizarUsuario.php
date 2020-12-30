@@ -20,10 +20,4 @@ if(isset($_POST['nome']) && $_POST['nome'] != '' &&  isset($_POST['telefone']) &
     else {
         setLocalStorage('createdUser', '{ status:"warning", details: "Preencha todos os campos!" }');
     }
-
-    function setLocalStorage($itemName, $item) {
-        $js_code = 'sessionStorage.setItem("'.$itemName.'", JSON.stringify(' . $item . '));
-        window.location.href = "./"';
-        echo '<script>' . $js_code . '</script>';
-    }
 ?>

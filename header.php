@@ -8,7 +8,7 @@ verificaPermissao();
    <head>
       <meta charset="UTF-8">
       <title>
-         Editar Perfil 
+         <?php echo $titulo?>
       </title>
       <link rel="stylesheet" type="text/css" href="css/style.css">
       <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>

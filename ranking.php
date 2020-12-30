@@ -1,4 +1,5 @@
 <?php
+$titulo = "Ranking Global";
 include("header.php")
 ?>
       <header>
@@ -10,6 +11,7 @@ include("header.php")
          <h2>Informações dos jogadores:</h2>
          <table class="text-center">
             <tr>
+               <th>Posição</th>
                <th>Usuário</th>
                <th>Pontuação</th>
                <th>Nível atingido</th>
@@ -21,9 +23,9 @@ include("header.php")
 
                      $sql= 'SELECT pontuacao.id_usuario, pontuacao.pontuacao, pontuacao.nivel, pontuacao.tempo, usuario.user FROM pontuacao, usuario WHERE pontuacao.id_usuario=usuario.id ORDER BY pontuacao.pontuacao DESC limit 10';
 
-                     foreach ($conn->query($sql) as $row) {
+                     foreach ($conn->query($sql) as $key=>$row) {
                         echo "<tr>";
-
+                        echo "<td>".($key+1)."</td>";
                         echo "<td>".$row['user']."</td>";
                         echo "<td>".$row['pontuacao']."</td>";
                         echo "<td>".$row['nivel']."</td>";

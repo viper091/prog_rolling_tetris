@@ -1,4 +1,5 @@
 <?php
+$titulo = "Tetris";
 include("header.php")
 ?>
       <header>
@@ -14,7 +15,8 @@ include("header.php")
                <li>Pontuação: <span id="pontuacao">0</span></li>
                <li>Número de linhas eliminadas: <span id="linhas">0</span>  </li>
                <li>Nível de dificuldade: <span id="nivel">0</span></li>
-               <table class="text-center mt-4">
+            </ul>
+            <table class="text-center mt-4">
                   <tbody>
                      <tr>
                         <th>Nome</th>
@@ -43,7 +45,6 @@ include("header.php")
                      ?>
                   </tbody>
                </table>
-            </ul>
          </aside>
          <table id="tabela" style="width: 30%;" class="center"></table>
       </section>
